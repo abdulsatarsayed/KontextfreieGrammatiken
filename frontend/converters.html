@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Converters</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="site-name">
+                Converters
+                <div class="site-name-explination">NPDA <-> CFG</div>
+            </div>
+            <nav>
+                <a href="./index.html">Home</a>
+                <button id="change-theme">Theme</button>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <textarea id="converted-results"></textarea>
+        <!-- <div id="converted-results"> -->
+        <!-- test -->
+        <!-- </div> -->
+    </div>
+    <div class="converters-container">
+
+        <div id="errors-section" style="width: 100%"></div>
+
+        <div class="container">
+            <div class="converter">
+                <div class="converter-title">CFG to NPDA</div>
+                <div class="converter-description">
+                    This converter helps you to convert <b>CFG</b> json files to <b>NPDA</b> json file.
+                </div>
+
+                <label class="import-file">
+                    <div class="input-container">
+                        <div class="custom-file-button">
+                            <div class="custom-file-button-label">
+                                Import File:
+                            </div>
+                            <div id="custom-file-button-name-cfg"></div>
+                        </div>
+                        <div class="input-note">* accepts only <b>JSON</b> file.</div>
+                    </div>
+                    <input type="file" id="upload-file-cfg">
+                </label>
+
+                <button id="convert-and-display-cfg">Convert & Display</button>
+                <button id="download-cfg">download npda</button>
+            </div>
+
+            <div class="converter">
+                <div class="converter-title">NPDA to CFG</div>
+                <div class="converter-description">
+                    This converter helps you to convert <b>NPDA</b> json files to <b>CFG</b> json file.
+                </div>
+
+                <label class="import-file">
+                    <div class="input-container">
+                        <div class="custom-file-button">
+                            <div class="custom-file-button-label">
+                                Import File:
+                            </div>
+                            <div id="custom-file-button-name-npda"></div>
+                        </div>
+                        <div class="input-note">* accepts only <b>JSON</b> file.</div>
+                    </div>
+                    <input type="file" id="upload-file-npda">
+                </label>
+
+                <button id="convert-and-display-npda">Convert & Display</button>
+                <button id="download-npda">download cfg</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="./scripts/theme.js"></script>
+    <script type="module" src="./scripts/indexOfConverters.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+    "startSymbol": [
+        "S"
+    ],
+    "terminaleSymbole": [
+        "a",
+        "b"
+    ],
+    "variablen": [
+        "S",
+        "A",
+        "B"
+    ],
+
+    "produktionen": [
+        {"S": [["a","B","a"],["b","A","b"]]},
+        {"A": [["a", "A"],["a"]]},
+        {"B":[["b","B"],["b"]]}
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "states": [
+        "Z0"
+    ],
+    "inputSymbols": [
+        "a",
+        "b"
+    ],
+    "stackSymbols": [
+        "S",
+        "a",
+        "b"
+    ],
+    "transitions": {
+        "Z0": {
+            "": {"S": [["Z0", []],["Z0", ["a","S","b","S"]]]},
+           "a": {"a": [["Z0", []]]},
+           "b": {"b": [["Z0", []]]}
+        }
+    },
+    "initState": "Z0",
+    "initStackSymbol": "S"
+}

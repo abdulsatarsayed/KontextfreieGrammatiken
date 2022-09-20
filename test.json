@@ -1,0 +1,35 @@
+[
+    {
+        "id": "default",
+        "groups": [
+            {
+                "name": "Daten",
+                "showFlex":"true",
+                "fields": [
+                    "RS_Nummer",
+                    "Gueltig_ab",
+                    "Gueltig_Bis"
+                ]
+            },
+            {
+                "name": "Inhalt",
+                "showFlex":"true",
+                "fields": [
+                    "RS_Nummer",
+                    "Gueltig_ab",
+                    "Gueltig_Bis"
+                ]
+            },
+            {
+                "name": "Pruefer",
+                "showFlex":"true",
+                "fields": [
+                    "Pruefer",
+                    "Abteilung"
+                ]
+            }
+        ],"readOnly":[
+            "RS_Nummer"
+        ]
+    }
+]

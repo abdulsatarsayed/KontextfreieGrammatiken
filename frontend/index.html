@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Automata Tool</title>
+    <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="site-name">Automata Tool</div>
+            <nav>
+                <a href="#">Home</a>
+                <button id="change-theme">Theme</button>
+            </nav>
+        </div>
+    </header>
+    <section class="index-section">
+        <div class="container">
+            <div id="welcome-message">
+
+            </div>
+            <div class="options">
+                <div class="options-header">
+                    Please choose an action
+                </div>
+                <div class="options-content">
+                    <a href="./npda.html">Non deterministic push down automat (NPDA)</a>
+                </div>
+                <div class="options-content">
+                    <a href="./dpda.html">Deterministic push down automat (DPDA)</a>
+                </div>
+                <div class="options-content">
+                    <a href="./cfg.html">Context free grammar (CFG)</a>
+                </div>
+                <hr />
+                <div class="options-content">
+                    <a href="./converters.html">Converters (NPDA <-> CFG)</a>
+                </div>
+                <!-- <div class="options-content">
+                    <a href="./KAzuKFG.html">Converter from NPDA to CFG</a>
+                </div>
+                <div class="options-content">
+                    <a href="./KFGzuKA.html">Converter from CFG to NPDA</a>
+                </div> -->
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./scripts/theme.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new TypeIt("#welcome-message", {
+                strings: ["Welcome to the <b>automata</b> tool"],
+            }).go();
+        });
+    </script>
+</body>
+
+</html>

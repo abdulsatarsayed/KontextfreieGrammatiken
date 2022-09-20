@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>KFG</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="site-name">
+                CFG
+                <div class="site-name-explination">Context Free Grammer</div>
+            </div>
+            <nav>
+                <a href="./index.html">Home</a>
+                <button id="change-theme">Theme</button>
+            </nav>
+        </div>
+    </header>
+    <div class="page-content">
+        <div class="sidebar">
+            <label class="import-file">
+                <div class="input-container">
+                    <div class="custom-file-button">
+                        <div class="custom-file-button-label">
+                            Import File:
+                        </div>
+                        <div id="custom-file-button-name"></div>
+                    </div>
+                    <div class="input-note">* accepts only <b>JSON</b> file.</div>
+                </div>
+                <input type="file" id="import-file">
+            </label>
+
+            <div class="input-container">
+                <label for="word">Word</label>
+                <input type="text" id="word" placeholder="Example: a,a">
+                <div class="input-note">* Comma between each input alphabet</div>
+            </div>
+
+            <div class="sidebar-buttons">
+                <button id="set-CFG-button">Start</button>
+                <button id="clear">Reset</button>
+            </div>
+
+
+            <label>Parsed file content</label>
+            <div class="info-container">
+
+                <div class="parsed-info">
+                    <div id="parsed-terminal-symbols">Terminal symbols Σ:{}</div>
+                    <div id="parsed-variablen-symbols">Variablen V:{}</div>
+                    <div id="parsed-produktionen">Productions P:{}</div>
+                </div>
+
+                <div class="notes">
+                    <p>S: start symbol of grammer</p>
+                    <p>Σ: is a finite set of terminal symbols</p>
+                    <p>V: finite set of non terminal or variable symbols</p>
+                    <p>P: productions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="controllers">
+
+            </div>
+
+            <div id="errors-section-container">
+            </div>
+
+            <div id="tree">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/theme.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script type="module" src="./scripts/indexOfCFG.js"></script>
+    <script type="module" src="./scripts/treeGenerator.js"></script>
+</body>
+
+</html>

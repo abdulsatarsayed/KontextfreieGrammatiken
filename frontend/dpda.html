@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>DPDA</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="site-name">
+                DPDA
+                <div class="site-name-explination">Deterministic Push Down Automat</div>
+            </div>
+            <nav>
+                <a href="./index.html">Home</a>
+                <button id="change-theme">Theme</button>
+            </nav>
+        </div>
+    </header>
+    <div class="page-content">
+        <div class="sidebar">
+            <form id="import-form">
+                <label class="import-file">
+                    <div class="input-container">
+                        <div class="custom-file-button">
+                            <div class="custom-file-button-label">
+                                Import File:
+                            </div>
+                            <div id="custom-file-button-name"></div>
+                        </div>
+                        <div class="input-note">* accepts only <b>JSON</b> file.</div>
+                    </div>
+                    <input type="file" id="import-file">
+                </label>
+            </form>
+
+            <div class="input-container">
+                <label for="word">Word</label>
+                <input type="text" id="word" placeholder="Example: a,a">
+                <div class="input-note">* Comma between each input alphabet</div>
+            </div>
+            <div class="sidebar-buttons">
+                <button id="set-DPDA-button">Start</button>
+                <button id="clear">Reset</button>
+            </div>
+
+            <label>Parsed file content</label>
+            <div class="info-container">
+
+                <div class="parsed-info">
+                    <div id="parsed-states">Z: {}</div>
+                    <div id="parsed-input-symbols">Σ: {}</div>
+                    <div id="parsed-stack-symbols">Γ: {}</div>
+                    <div id="parsed-transitions">δ: {}</div>
+                </div>
+
+                <div class="notes">
+                    <p>Z: is a finite set of states.</p>
+                    <p>Σ: is a finite set of input alphabet</p>
+                    <p>Γ: finite set which called Stack alphabets</p>
+                    <p>δ: transition relation</p>
+                    <p>z0: start state</p>
+                    <p>#: initial stack symbol: finite set of accepting states</p>
+                    <p>z: finite set of accepted states</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-section">
+
+            <div id="errors-section-container">
+            </div>
+
+            <div id="tree">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/theme.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script type="module" src="./scripts/indexOfDPDA.js"></script>
+</body>
+
+</html>
